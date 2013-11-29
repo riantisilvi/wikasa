@@ -1,0 +1,26 @@
+{
+  "name": "wikasa",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rbangsawan/wikasa",
+  "authors": [
+    "Rezki Bangsawan <rbangsawan@gmail.com>"
+  ],
+  "description": "Emp. Ed.",
+  "main": "Gruntfile.js",
+  "keywords": [
+    "Wikasa"
+  ],
+  "license": "Free",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/js/lib",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.0.3",
+    "responsejs": "~0.7.8"
+  }
+}

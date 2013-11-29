@@ -1,0 +1,35 @@
+{
+  "name": "wikasa",
+  "version": "0.0.0",
+  "description": "Emp. Ed.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbangsawan/wikasa.git"
+  },
+  "keywords": [
+    "wikasa"
+  ],
+  "author": "bangsawan & rianti",
+  "license": "Free",
+  "bugs": {
+    "url": "https://github.com/rbangsawan/wikasa/issues"
+  },
+  "homepage": "https://github.com/rbangsawan/wikasa",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "matchdep": "~0.3.0",
+    "connect-livereload": "~0.3.0",
+    "grunt-contrib-sass": "~0.5.1",
+    "grunt-open": "~0.2.2"
+  }
+}
