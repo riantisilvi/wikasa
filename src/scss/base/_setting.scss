@@ -1,0 +1,50 @@
+/** ----------------------------------------------------------------- *\
+ *  WIKASA.BASE.SETTING
+ *  
+ *  Variables & Global styles.
+ *  @author Rezki Bangsawan
+ *  @version 0.0.0
+ *  Copyright 2013. Free licensed.
+ ** ----------------------------------------------------------------- */
+
+// --------------------------------------------------------------------\
+// Foundation.
+// --------------------------------------------------------------------/
+
+$base: 16;
+$lead: $base * 1.5;
+$basepx: ($base * 1px);
+$leadpx: ($lead * 1.5px);
+
+
+// --------------------------------------------------------------------\
+// Typography.
+// --------------------------------------------------------------------/
+
+$f-weight:  normal;
+$f-lead:    1;
+$f-size:    100;
+$f-base:    $base * ( $f-size / 100 );
+$f-ratio:   $f-size * $f-lead;
+$f-props:   $f-weight, $f-lead, $f-size, $ff-sans-regular;
+
+$f-scale-unit: rem !default;
+
+// Type Scale
+$tera:       6   * $base-font-size;
+$giga:       5.5 * $base-font-size;
+$mega:       5   * $base-font-size;
+$alpha:      3   * $base-font-size;
+$beta:       2.5 * $base-font-size;
+$gamma:      2   * $base-font-size;
+$delta:      1.5 * $base-font-size;
+$epsilon:    1   * $base-font-size;
+$zeta:       0.5 * $base-font-size;
+
+
+
+// --------------------------------------------------------------------\
+// Boolean.
+// --------------------------------------------------------------------/
+
+$global-border-box-model: true !default;

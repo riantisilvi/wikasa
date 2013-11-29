@@ -258,7 +258,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'sass:dev',
     'csslint',
-    'jshint',
+    // 'jshint',
     // 'concat:dev',
     'connect:livereload',
     'open',

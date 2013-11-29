@@ -1,0 +1,18 @@
+/** ----------------------------------------------------------------- *\
+ *  WIKASA.BASE.FONT
+ *  
+ *  Webfont import & setup.
+ *  @author Rezki Bangsawan
+ *  @version 0.0.0
+ *  Copyright 2013. Free licensed.
+ ** ----------------------------------------------------------------- */
+
+@include rb-font-face( 'SansBold', 'AkkBd_Pro_1' );
+@include rb-font-face( 'SansRegular', 'AkkRg_Pro_1' );
+@include rb-font-face( 'SansLight', 'AkkLg_Pro_1' );
+@include rb-font-face( 'SansLightItalic', 'AkkLgIt_Pro_1' );
+
+$ff-sans-bold: SansBold, Arial, sans-serif;
+$ff-sans-regular: SansRegular, Arial, sans-serif;
+$ff-sans-light: SansLight, Arial, sans-serif;
+$ff-sans-lightitalic: SansLightItalic, Arial, sans-serif;

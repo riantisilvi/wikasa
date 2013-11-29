@@ -10,18 +10,14 @@
 // --------------------------------------------------------------------\
 // Mixin.
 // --------------------------------------------------------------------/
-// @import "mixin/webfont";
-// @import "mixin/layout";
-// @import "mixin/color";
-// @import "mixin/animation";
+@import "mixin/webfont";
 
 
 // --------------------------------------------------------------------\
 // Base.
 // --------------------------------------------------------------------/
-// @import "base/font";
-// @import "base/setting";
-// @import "vendor/Normalize/normalize";
-// @import "base/color";
-// @import "base/typo";
-// @import "base/element";
+@import "base/font";
+@import "base/setting";
+@import "base/normalize";
+@import "base/color";
+@import "base/element";

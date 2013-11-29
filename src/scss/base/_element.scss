@@ -1,0 +1,36 @@
+/** ----------------------------------------------------------------- *\
+ *  WIKASA.BASE.SETTING
+ *  
+ *  Variables & Global styles.
+ *  @author Rezki Bangsawan
+ *  @version 0.0.0
+ *  Copyright 2013. Free licensed.
+ ** ----------------------------------------------------------------- */
+
+// --------------------------------------------------------------------\
+// Box Model.
+// --------------------------------------------------------------------/
+%border-box-model {
+	@include box-sizing(border-box);
+}
+
+*,
+*:before,
+*:after {
+	@extend %border-box-model;
+}
+
+// --------------------------------------------------------------------\
+// Grid BG.
+// --------------------------------------------------------------------/
+// Compass Background Grid config.
+$grid-background-baseline-height: rhythm(1);
+$grid-background-baseline-color: rgba(36, 93, 234, 1);
+
+// --------------------------------------------------------------------\
+// Body.
+// --------------------------------------------------------------------/
+body {
+	@include baseline-grid-background;
+	font-family: $ff-sans-regular;
+}
