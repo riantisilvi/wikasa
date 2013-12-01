@@ -1,0 +1,302 @@
+/** ----------------------------------------------------------------- *\
+ *  WIKASA.OBJECT.COMMON.HEADER
+ *  
+ *  Common.Header object.
+ *  @author Rezki & Rianti
+ *  @version 0.0.0
+ *  Copyright 2013. Free licensed.
+ ** ----------------------------------------------------------------- */
+
+$subUnit: 60px;
+$brandUnit: 60px; // Depends on image dimension.
+
+%subLooks {
+	color: inherit;
+	border-left: 1px solid $whiteDark1;
+	&:hover {
+		background-color: $whiteDark1;
+	}
+}
+
+%subLayout {
+	font-size: 14px;
+	display: block;
+	margin: 0;
+	max-height: $subUnit;
+	height: $subUnit;
+	overflow: hidden;
+	text-align: center;
+	line-height: $subUnit;
+}
+
+.cm-headers {
+	width: 100%;
+	background-color: #FFF;
+	color: $blackLite;
+	margin: 0 0 12px 0;
+}
+.cm-header {
+	@extend %cn-full;
+	height: $subUnit;
+}
+.brand-pri {
+	@extend %subLayout;
+	float: left;
+	position: relative;
+	width: $subUnit;
+	background-color: $blackLite;
+	margin: 0 210px 0 0;
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -30px 0 0 -30px;
+	}
+}
+
+.nav-crs-secs {
+	position: relative;
+	float: left;
+	height: $subUnit;
+}
+
+.ncs {
+	@extend %subLooks;
+	@extend %subLayout;
+	border-right: 1px solid $whiteDark1;
+	width: 155px;
+}
+
+.ncs-dds {
+	@include border-radius(6px);
+	@include single-box-shadow;
+	display: none;
+	position: absolute;
+	top: $leadpx * 3;
+	left: 0;
+	padding: 24px 12px 0;
+	min-width: 480px;
+	max-width: 480px;
+	min-height: 240px;
+	width: 480px;
+	background-color: $white;
+	font-size: 14px;
+
+	&:before {
+		content: "";
+		width: 0;
+		height: 0;
+		position: absolute;
+		left: 24px;
+		bottom: 100%;
+		border-width: 0 6px 6px 6px;
+		border-style: solid;
+		border-color: transparent transparent #FFF;
+	}
+
+	&.open { display: block; }
+}
+
+.ncs-cat1,
+.ncs-cat2 {
+	@include clearfix;
+	position: relative;
+	width: 100%;
+	list-style: none outside none;
+}
+
+%ncs-cat-li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 30%;
+	height: 36px;
+	margin: 0 1.6665%;
+}
+
+.ncs-cat1 {
+	margin: 0 0 24px 0;
+	padding: 0 0 12px 0;
+	border-bottom: 1px solid $whiteDark1;
+	list-style: none outside none;
+	border-bottom: 1px solid $whiteDark1;
+
+	li { @extend %ncs-cat-li; }
+
+	.cat {
+		@include border-radius(3px);
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: $black;
+		color: $green;
+		font-size: inherit;
+		line-height: 36px;
+		padding: 0 6px;
+		text-align: center;
+
+		&:hover {
+			background-color: $green;
+			color: $white;
+		}
+	}
+}
+
+.ncs-cat2 {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+
+	li { @extend %ncs-cat-li; }
+
+	.crs {
+		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: 24px;
+		font-size: inherit;
+		padding: 0 6px;
+		color: $black;
+
+		&:hover {
+			color: $green;
+		}
+	}
+}
+
+.header-tools {
+	display: block;
+	height: 100%;
+	float: right;
+}
+
+.header-tool {
+	@extend %subLooks;
+	@extend %subLayout;
+	float: left;
+	display: block;
+
+	&.sch,
+	&.msg,
+	&.ntf {
+		width: 0%;
+		min-width: 60px;
+	}
+}
+
+.header-tool.sch {
+	@include transition(width 0.3s ease-in);
+	@include backface-visibility(hidden);
+	position: relative;
+	overflow: hidden;
+	min-width: 60px;
+	width: 0%;
+
+	.no-js &, &.open { width: 240px; }
+
+	& > form {
+		display: block;
+		width: 100%;
+		height: 60px;
+		padding: 0 0 0 24px;
+		background-color: $whiteDark1;
+	}
+
+	.sch-input {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		display: block;
+		float: left;
+		margin: 0;
+		width: 90%;
+		height: $subUnit;
+		outline: none;
+		border: none;
+		background: $whiteDark1;
+		color: inherit;
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	input[type="search"].sch-input {
+		@include border-radius(0);
+		-webkit-appearance: none;
+	}
+
+	.sch-input::-webkit-input-placeholder { color: $black; font-family: $ff-sans-lightitalic; }
+	.sch-input:-moz-placeholder { color: $black; }
+	.sch-input::-moz-placeholder { color: $black; }
+
+	.sch-input:-ms-input-placeholder { color: $black; }
+
+	.sch-submit,
+	.sch-icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		float: left;
+		margin: 0;
+		padding: 0;
+		width: $subUnit;
+		height: $subUnit;
+		background-color: $white;
+		text-align: center;
+		font-size: inherit;
+		line-height: inherit;
+		cursor: pointer;
+	}
+
+	.sch-icon {
+		z-index: 90;
+	}
+
+	&.open .sch-icon {
+		background-color: $whiteDark1;
+		z-index: 11;
+	}
+
+	.sch-submit {
+		background: #fff; /* IE */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+		filter: alpha(opacity=0); /* IE 5-7 */
+		opacity: 0;
+		color: transparent;
+		border: none;
+		outline: none;
+		z-index: -1;
+	}
+}
+
+.header-tool.ntf {
+	&.active {
+		color: $white;
+		background-color: $red;
+	}
+}
+
+.nav-myc-pri {
+	@extend %subLooks;
+	@extend %subLayout;
+	float: left;
+	width: 100px;
+}
+
+.nav-unm-pri {
+	@extend %subLooks;
+	@extend %subLayout;
+	float: left;
+	padding: 0 6px;
+
+	& > * {
+		display: block;
+		height: 100%;
+		line-height: 60px;
+		float: left;
+		margin: 0 6px;
+	}
+}

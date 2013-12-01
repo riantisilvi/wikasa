@@ -14,7 +14,7 @@
 $base: 16;
 $lead: $base * 1.5;
 $basepx: ($base * 1px);
-$leadpx: ($lead * 1.5px);
+$leadpx: ($lead * 1px);
 
 
 // --------------------------------------------------------------------\
@@ -44,7 +44,17 @@ $zeta:       0.5 * $base-font-size;
 
 
 // --------------------------------------------------------------------\
-// Boolean.
+// Box Model.
 // --------------------------------------------------------------------/
 
 $global-border-box-model: true !default;
+
+// --------------------------------------------------------------------\
+// Box Shadow.
+// --------------------------------------------------------------------/
+$default-box-shadow-color: rgba(0, 0, 0, 0.2);
+$default-box-shadow-h-offset: 2px;
+$default-box-shadow-v-offset: 2px;
+$default-box-shadow-blur: 0;
+$default-box-shadow-spread: false;
+$default-box-shadow-inset: false;

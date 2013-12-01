@@ -27,10 +27,14 @@
 $grid-background-baseline-height: rhythm(1);
 $grid-background-baseline-color: rgba(36, 93, 234, 1);
 
+.debug {
+	@include baseline-grid-background;
+}
+
 // --------------------------------------------------------------------\
 // Body.
 // --------------------------------------------------------------------/
 body {
-	@include baseline-grid-background;
 	font-family: $ff-sans-regular;
+	background-color: $whiteDark1;
 }
