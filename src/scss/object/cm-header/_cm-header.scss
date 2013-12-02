@@ -286,11 +286,21 @@ $brandUnit: 60px; // Depends on image dimension.
 	width: 100px;
 }
 
+.nav-unm-pris {
+	float: left;
+	height: $subUnit;
+	position: relative;
+}
+
 .nav-unm-pri {
 	@extend %subLooks;
 	@extend %subLayout;
 	float: left;
 	padding: 0 6px;
+
+	&.active {
+		background-color: $green;
+	}
 
 	& > * {
 		display: block;
@@ -298,5 +308,64 @@ $brandUnit: 60px; // Depends on image dimension.
 		line-height: 60px;
 		float: left;
 		margin: 0 6px;
+	}
+}
+
+.nup-dds {
+	@include border-radius(6px);
+	@include single-box-shadow;
+	display: none;
+	position: absolute;
+	top: $leadpx * 3;
+	right: 0;
+	width: 180px;
+	background-color: $white;
+
+	&:before {
+		content: "";
+		width: 0;
+		height: 0;
+		position: absolute;
+		right: 24px;
+		bottom: 100%;
+		border-width: 0 6px 6px 6px;
+		border-style: solid;
+		border-color: transparent transparent #FFF;
+	}
+
+	&.open { display: block; }
+
+	.nup-tools {
+		margin: 24px 0 0 0;
+		padding: 0;
+		width: 100%;
+		list-style: none outside none;
+
+		li {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 32px;
+		}
+
+		.nup-tool {
+			display: block;
+			color: $black;
+			font-size: 12px;
+			line-height: 32px;
+			height: 32px;
+			padding: 0 12px;
+			
+			&:not(.btn-logout) {border-bottom: 1px solid $whiteDark1;}
+
+			.fa { margin: 0 12px 0 0; }
+
+			&.btn-logout {
+				background-color: $red;
+				color: $white;
+				text-align: center;
+				@include border-radius(0 0 6px 6px);
+			}
+		}
 	}
 }
